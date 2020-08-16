@@ -13,7 +13,6 @@ module LabelValidator
     end
 
     def release_labeled?
-      puts(@label)
       return true if @label
       false
     end
@@ -25,14 +24,12 @@ module LabelValidator
     protected
 
     def release_label
-      release_labels = @pull_request['labels'].detect { |l| l['name'] =~ /^release:\s(major|minor|patch)/i }
-      if release_labels
-        return release_labels['name']
+      release_labels = @pull_request['labels'].select { |l| l['name'] =~ /^release:\s(major|minor|patch)/i }
+      if release_labels.count == 1
+        return release_labels[0]['name']
       else
         return nil
       end
     end
-
-
   end
 end
