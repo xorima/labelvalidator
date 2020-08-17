@@ -5,15 +5,14 @@ module LabelValidator
   class Labels
     def initialize(pull_request:)
       @pull_request = pull_request
-      @label = self.release_label()
+      @label = release_label
     end
 
-    def label
-      @label
-    end
+    attr_reader :label
 
     def release_labeled?
       return true if @label
+
       false
     end
 
@@ -25,11 +24,7 @@ module LabelValidator
 
     def release_label
       release_labels = @pull_request['labels'].select { |l| l['name'] =~ /^release:\s(major|minor|patch)/i }
-      if release_labels.count == 1
-        return release_labels[0]['name']
-      else
-        return nil
-      end
+      release_labels[0]['name'] if release_labels.count == 1
     end
   end
 end

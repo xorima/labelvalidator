@@ -2,14 +2,14 @@
 
 source 'https://rubygems.org'
 
-gem "sinatra"
-gem "octokit", "~> 4.0"
+gem 'octokit', '~> 4.0'
+gem 'sinatra'
 
 group :test do
+  gem 'rack-test'
   gem 'rake'
   gem 'rspec'
   gem 'rubocop'
   gem 'vcr'
   gem 'webmock'
-  gem 'rack-test'
 end
