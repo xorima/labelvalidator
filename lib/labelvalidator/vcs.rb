@@ -5,7 +5,7 @@ require 'octokit'
 module LabelValidator
   # Used to handle calls to VCS
   class Vcs
-    def initialize(token:, pull_request:, comments_enabled: ENV['COMMENTS_ENABLED'])
+    def initialize(token:, pull_request:, comments_enabled: ENV['COMMENTS_ENABLED'] || true)
       @client = Octokit::Client.new(access_token: token)
       @pull_request = pull_request
       @comment_base = 'LabelValidator: This will be bumped on merge by a'
@@ -13,14 +13,12 @@ module LabelValidator
     end
 
     def default_branch_target?
-      true if @pull_request['base']['ref'] == @pull_request['base']['repo']['default_branch']
-      false
+      @pull_request['base']['ref'] == @pull_request['base']['repo']['default_branch']
     end
 
     def status_check(state:)
-      raise ArgumentError, 'State must be pending, success, failure' unless %w(pending success failure).include?(state)
-
-      @client.create_status(@pull_request['head']['repo']['full_name'],
+      raise ArgumentError, 'State must be pending, success, failure' unless %w[pending success failure].include?(state)
+      @client.create_status(@pull_request['base']['repo']['full_name'],
                             @pull_request['head']['sha'],
                             state,
                             { context: 'Release Label Validator',
@@ -54,14 +52,14 @@ module LabelValidator
 
     def get_bot_comments(filter)
       user = @client.user[:login]
-      all_comments = @client.issue_comments(@pull_request['head']['repo']['full_name'], @pull_request['number'])
+      all_comments = @client.issue_comments(@pull_request['base']['repo']['full_name'], @pull_request['number'])
       bot_comments = all_comments.select { |c| c[:user][:login] == user }
       filter_regex = Regexp.new(filter)
       bot_comments.select { |c| c[:body] =~ filter_regex }
     end
 
     def add_bot_comment(body)
-      @client.add_comment(@pull_request['head']['repo']['full_name'],
+      @client.add_comment(@pull_request['base']['repo']['full_name'],
                           @pull_request['number'],
                           body)
     end
@@ -82,7 +80,7 @@ module LabelValidator
     end
 
     def delete_comment(comment)
-      @client.delete_comment(@pull_request['head']['repo']['full_name'],
+      @client.delete_comment(@pull_request['base']['repo']['full_name'],
                              comment['id'])
     end
   end
