@@ -27,6 +27,8 @@ module LabelValidator
     end
 
     def delete_all_bot_comments
+      puts('comments')
+      puts(@comments_enabled)
       return 'skip comments' unless @comments_enabled
 
       bot_comments = get_bot_comments(@comment_base)
