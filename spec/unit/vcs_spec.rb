@@ -7,8 +7,7 @@ describe LabelValidator::Vcs, :vcr do
   before(:each) do
     pull_request = { 'base' => { 'ref' => 'master', 'repo' => { 'default_branch' => 'master', 'full_name' => 'Xorima/xor_test_cookbook' } },
                      'head' => { 'sha' => '202ae3fd1b76a28c9272372a29ae9b8070a79f48' },
-                     'number' => 22
-                    }
+                     'number' => 22 }
     @vcs_client = LabelValidator::Vcs.new({
                                             token: ENV['GITHUB_TOKEN'] || 'temp_token',
                                             pull_request: pull_request

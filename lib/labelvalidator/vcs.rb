@@ -18,6 +18,7 @@ module LabelValidator
 
     def status_check(state:)
       raise ArgumentError, 'State must be pending, success, failure' unless %w[pending success failure].include?(state)
+
       @client.create_status(@pull_request['base']['repo']['full_name'],
                             @pull_request['head']['sha'],
                             state,
