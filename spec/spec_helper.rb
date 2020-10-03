@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Setup
 require 'vcr'
 require 'rack/test'
@@ -7,8 +9,9 @@ require 'rspec'
 require 'labelvalidator'
 
 # Tests
-require_relative 'unit/labelvalidator'
-require_relative 'unit/labels'
+# require_relative 'unit/labelvalidator'
+# require_relative 'unit/labels'
+# require_relative 'unit/vcs_spec'
 
 ENV['RACK_ENV'] = 'test'
 

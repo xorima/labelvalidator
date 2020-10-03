@@ -1,0 +1,442 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/user
+    body:
+      encoding: US-ASCII
+      base64_string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.18.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - "<AUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 17 Aug 2020 17:47:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - GitHub.com
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4924'
+      X-Ratelimit-Reset:
+      - '1597687904'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      - Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"c436c7dd54e745968162268e3a1d9e29"
+      Last-Modified:
+      - Mon, 17 Aug 2020 16:37:49 GMT
+      X-Oauth-Scopes:
+      - admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key,
+        admin:repo_hook, delete:packages, gist, notifications, read:packages, repo,
+        user, workflow, write:discussion, write:packages
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - BB7C:2ECE:B8AEBA1:DF4F4C1:5F3AC2CB
+    body:
+      encoding: ASCII-8BIT
+      base64_string: |
+        eyJsb2dpbiI6IlhvcmltYSIsImlkIjo0OTIzOTE0LCJub2RlX2lkIjoiTURR
+        NlZYTmxjalE1TWpNNU1UUT0iLCJhdmF0YXJfdXJsIjoiaHR0cHM6Ly9hdmF0
+        YXJzMC5naXRodWJ1c2VyY29udGVudC5jb20vdS80OTIzOTE0P3Y9NCIsImdy
+        YXZhdGFyX2lkIjoiIiwidXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91
+        c2Vycy9Yb3JpbWEiLCJodG1sX3VybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9Y
+        b3JpbWEiLCJmb2xsb3dlcnNfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNv
+        bS91c2Vycy9Yb3JpbWEvZm9sbG93ZXJzIiwiZm9sbG93aW5nX3VybCI6Imh0
+        dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1hL2ZvbGxvd2luZ3sv
+        b3RoZXJfdXNlcn0iLCJnaXN0c191cmwiOiJodHRwczovL2FwaS5naXRodWIu
+        Y29tL3VzZXJzL1hvcmltYS9naXN0c3svZ2lzdF9pZH0iLCJzdGFycmVkX3Vy
+        bCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1hL3N0YXJy
+        ZWR7L293bmVyfXsvcmVwb30iLCJzdWJzY3JpcHRpb25zX3VybCI6Imh0dHBz
+        Oi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1hL3N1YnNjcmlwdGlvbnMi
+        LCJvcmdhbml6YXRpb25zX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20v
+        dXNlcnMvWG9yaW1hL29yZ3MiLCJyZXBvc191cmwiOiJodHRwczovL2FwaS5n
+        aXRodWIuY29tL3VzZXJzL1hvcmltYS9yZXBvcyIsImV2ZW50c191cmwiOiJo
+        dHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL1hvcmltYS9ldmVudHN7L3By
+        aXZhY3l9IiwicmVjZWl2ZWRfZXZlbnRzX3VybCI6Imh0dHBzOi8vYXBpLmdp
+        dGh1Yi5jb20vdXNlcnMvWG9yaW1hL3JlY2VpdmVkX2V2ZW50cyIsInR5cGUi
+        OiJVc2VyIiwic2l0ZV9hZG1pbiI6ZmFsc2UsIm5hbWUiOiJKYXNvbiBGaWVs
+        ZCIsImNvbXBhbnkiOm51bGwsImJsb2ciOiIiLCJsb2NhdGlvbiI6IkxvbmRv
+        biwgVW5pdGVkIEtpbmdkb20iLCJlbWFpbCI6bnVsbCwiaGlyZWFibGUiOnRy
+        dWUsImJpbyI6Ik9wZW4gU291cmNlIEFkdm9jYXRlLCBDcmVhdG9yIG9mIEBB
+        Y3Rpb25zSHViLiBAU291cy1DaGVmcyBCb2FyZCBNZW1iZXIsIE93bmVyIG9m
+        IEB4b3JpbWFib3QiLCJ0d2l0dGVyX3VzZXJuYW1lIjoieG9yaW1hX29zcyIs
+        InB1YmxpY19yZXBvcyI6MjQsInB1YmxpY19naXN0cyI6MCwiZm9sbG93ZXJz
+        IjoxMSwiZm9sbG93aW5nIjo0LCJjcmVhdGVkX2F0IjoiMjAxMy0wNy0wMlQx
+        OTowNDoyMVoiLCJ1cGRhdGVkX2F0IjoiMjAyMC0wOC0xN1QxNjozNzo0OVoi
+        LCJwcml2YXRlX2dpc3RzIjowLCJ0b3RhbF9wcml2YXRlX3JlcG9zIjoxMiwi
+        b3duZWRfcHJpdmF0ZV9yZXBvcyI6MTIsImRpc2tfdXNhZ2UiOjI3NDMxMCwi
+        Y29sbGFib3JhdG9ycyI6MiwidHdvX2ZhY3Rvcl9hdXRoZW50aWNhdGlvbiI6
+        dHJ1ZSwicGxhbiI6eyJuYW1lIjoiZnJlZSIsInNwYWNlIjo5NzY1NjI0OTks
+        ImNvbGxhYm9yYXRvcnMiOjAsInByaXZhdGVfcmVwb3MiOjEwMDAwfX0=
+  recorded_at: Mon, 17 Aug 2020 17:47:55 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/Xorima/xor_test_cookbook/issues/22/comments
+    body:
+      encoding: US-ASCII
+      base64_string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.18.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - "<AUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 17 Aug 2020 17:47:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - GitHub.com
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4923'
+      X-Ratelimit-Reset:
+      - '1597687904'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      - Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"7512e2e67a324799cf9b7dbe3f08140d"
+      X-Oauth-Scopes:
+      - admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key,
+        admin:repo_hook, delete:packages, gist, notifications, read:packages, repo,
+        user, workflow, write:discussion, write:packages
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - BB7E:28D5:163A769C:1B1D3F5E:5F3AC2CB
+    body:
+      encoding: ASCII-8BIT
+      base64_string: |
+        W3sidXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9yZXBvcy9Yb3JpbWEv
+        eG9yX3Rlc3RfY29va2Jvb2svaXNzdWVzL2NvbW1lbnRzLzY3NDU4NTExMCIs
+        Imh0bWxfdXJsIjoiaHR0cHM6Ly9naXRodWIuY29tL1hvcmltYS94b3JfdGVz
+        dF9jb29rYm9vay9wdWxsLzIyI2lzc3VlY29tbWVudC02NzQ1ODUxMTAiLCJp
+        c3N1ZV91cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL1hvcmlt
+        YS94b3JfdGVzdF9jb29rYm9vay9pc3N1ZXMvMjIiLCJpZCI6Njc0NTg1MTEw
+        LCJub2RlX2lkIjoiTURFeU9rbHpjM1ZsUTI5dGJXVnVkRFkzTkRVNE5URXhN
+        QT09IiwidXNlciI6eyJsb2dpbiI6IlhvcmltYSIsImlkIjo0OTIzOTE0LCJu
+        b2RlX2lkIjoiTURRNlZYTmxjalE1TWpNNU1UUT0iLCJhdmF0YXJfdXJsIjoi
+        aHR0cHM6Ly9hdmF0YXJzMC5naXRodWJ1c2VyY29udGVudC5jb20vdS80OTIz
+        OTE0P3Y9NCIsImdyYXZhdGFyX2lkIjoiIiwidXJsIjoiaHR0cHM6Ly9hcGku
+        Z2l0aHViLmNvbS91c2Vycy9Yb3JpbWEiLCJodG1sX3VybCI6Imh0dHBzOi8v
+        Z2l0aHViLmNvbS9Yb3JpbWEiLCJmb2xsb3dlcnNfdXJsIjoiaHR0cHM6Ly9h
+        cGkuZ2l0aHViLmNvbS91c2Vycy9Yb3JpbWEvZm9sbG93ZXJzIiwiZm9sbG93
+        aW5nX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1h
+        L2ZvbGxvd2luZ3svb3RoZXJfdXNlcn0iLCJnaXN0c191cmwiOiJodHRwczov
+        L2FwaS5naXRodWIuY29tL3VzZXJzL1hvcmltYS9naXN0c3svZ2lzdF9pZH0i
+        LCJzdGFycmVkX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMv
+        WG9yaW1hL3N0YXJyZWR7L293bmVyfXsvcmVwb30iLCJzdWJzY3JpcHRpb25z
+        X3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1hL3N1
+        YnNjcmlwdGlvbnMiLCJvcmdhbml6YXRpb25zX3VybCI6Imh0dHBzOi8vYXBp
+        LmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1hL29yZ3MiLCJyZXBvc191cmwiOiJo
+        dHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL1hvcmltYS9yZXBvcyIsImV2
+        ZW50c191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL1hvcmlt
+        YS9ldmVudHN7L3ByaXZhY3l9IiwicmVjZWl2ZWRfZXZlbnRzX3VybCI6Imh0
+        dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1hL3JlY2VpdmVkX2V2
+        ZW50cyIsInR5cGUiOiJVc2VyIiwic2l0ZV9hZG1pbiI6ZmFsc2V9LCJjcmVh
+        dGVkX2F0IjoiMjAyMC0wOC0xNlQyMjoyMDo0MFoiLCJ1cGRhdGVkX2F0Ijoi
+        MjAyMC0wOC0xNlQyMjoyMDo0MFoiLCJhdXRob3JfYXNzb2NpYXRpb24iOiJP
+        V05FUiIsImJvZHkiOiJBUEkgRXhhbXBsZSBDb21tZW50IiwicGVyZm9ybWVk
+        X3ZpYV9naXRodWJfYXBwIjpudWxsfSx7InVybCI6Imh0dHBzOi8vYXBpLmdp
+        dGh1Yi5jb20vcmVwb3MvWG9yaW1hL3hvcl90ZXN0X2Nvb2tib29rL2lzc3Vl
+        cy9jb21tZW50cy82NzUwMjE0NjAiLCJodG1sX3VybCI6Imh0dHBzOi8vZ2l0
+        aHViLmNvbS9Yb3JpbWEveG9yX3Rlc3RfY29va2Jvb2svcHVsbC8yMiNpc3N1
+        ZWNvbW1lbnQtNjc1MDIxNDYwIiwiaXNzdWVfdXJsIjoiaHR0cHM6Ly9hcGku
+        Z2l0aHViLmNvbS9yZXBvcy9Yb3JpbWEveG9yX3Rlc3RfY29va2Jvb2svaXNz
+        dWVzLzIyIiwiaWQiOjY3NTAyMTQ2MCwibm9kZV9pZCI6Ik1ERXlPa2x6YzNW
+        bFEyOXRiV1Z1ZERZM05UQXlNVFEyTUE9PSIsInVzZXIiOnsibG9naW4iOiJY
+        b3JpbWEiLCJpZCI6NDkyMzkxNCwibm9kZV9pZCI6Ik1EUTZWWE5sY2pRNU1q
+        TTVNVFE9IiwiYXZhdGFyX3VybCI6Imh0dHBzOi8vYXZhdGFyczAuZ2l0aHVi
+        dXNlcmNvbnRlbnQuY29tL3UvNDkyMzkxND92PTQiLCJncmF2YXRhcl9pZCI6
+        IiIsInVybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1h
+        IiwiaHRtbF91cmwiOiJodHRwczovL2dpdGh1Yi5jb20vWG9yaW1hIiwiZm9s
+        bG93ZXJzX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9y
+        aW1hL2ZvbGxvd2VycyIsImZvbGxvd2luZ191cmwiOiJodHRwczovL2FwaS5n
+        aXRodWIuY29tL3VzZXJzL1hvcmltYS9mb2xsb3dpbmd7L290aGVyX3VzZXJ9
+        IiwiZ2lzdHNfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9Y
+        b3JpbWEvZ2lzdHN7L2dpc3RfaWR9Iiwic3RhcnJlZF91cmwiOiJodHRwczov
+        L2FwaS5naXRodWIuY29tL3VzZXJzL1hvcmltYS9zdGFycmVkey9vd25lcn17
+        L3JlcG99Iiwic3Vic2NyaXB0aW9uc191cmwiOiJodHRwczovL2FwaS5naXRo
+        dWIuY29tL3VzZXJzL1hvcmltYS9zdWJzY3JpcHRpb25zIiwib3JnYW5pemF0
+        aW9uc191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL1hvcmlt
+        YS9vcmdzIiwicmVwb3NfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91
+        c2Vycy9Yb3JpbWEvcmVwb3MiLCJldmVudHNfdXJsIjoiaHR0cHM6Ly9hcGku
+        Z2l0aHViLmNvbS91c2Vycy9Yb3JpbWEvZXZlbnRzey9wcml2YWN5fSIsInJl
+        Y2VpdmVkX2V2ZW50c191cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3Vz
+        ZXJzL1hvcmltYS9yZWNlaXZlZF9ldmVudHMiLCJ0eXBlIjoiVXNlciIsInNp
+        dGVfYWRtaW4iOmZhbHNlfSwiY3JlYXRlZF9hdCI6IjIwMjAtMDgtMTdUMTc6
+        NDc6NTRaIiwidXBkYXRlZF9hdCI6IjIwMjAtMDgtMTdUMTc6NDc6NTRaIiwi
+        YXV0aG9yX2Fzc29jaWF0aW9uIjoiT1dORVIiLCJib2R5IjoiTGFiZWxWYWxp
+        ZGF0b3I6IFRoaXMgd2lsbCBiZSBidW1wZWQgb24gbWVyZ2UgYnkgYSB0ZXN0
+        aW5nIHZlcnNpb24iLCJwZXJmb3JtZWRfdmlhX2dpdGh1Yl9hcHAiOm51bGx9
+        XQ==
+  recorded_at: Mon, 17 Aug 2020 17:47:55 GMT
+- request:
+    method: delete
+    uri: https://api.github.com/repos/Xorima/xor_test_cookbook/issues/comments/675021460
+    body:
+      encoding: UTF-8
+      base64_string: 'e30=
+
+        '
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.18.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - "<AUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Mon, 17 Aug 2020 17:47:56 GMT
+      Server:
+      - GitHub.com
+      Status:
+      - 204 No Content
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4922'
+      X-Ratelimit-Reset:
+      - '1597687904'
+      X-Oauth-Scopes:
+      - admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key,
+        admin:repo_hook, delete:packages, gist, notifications, read:packages, repo,
+        user, workflow, write:discussion, write:packages
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Github-Request-Id:
+      - BB82:BDEF:AB41AE2:D10E304:5F3AC2CB
+    body:
+      encoding: UTF-8
+      base64_string: ''
+  recorded_at: Mon, 17 Aug 2020 17:47:56 GMT
+- request:
+    method: post
+    uri: https://api.github.com/repos/Xorima/xor_test_cookbook/issues/22/comments
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJib2R5IjoiTGFiZWxWYWxpZGF0b3I6IFRoaXMgd2lsbCBiZSBidW1wZWQg
+        b24gbWVyZ2UgYnkgYSBmb29iYXIgdmVyc2lvbiJ9
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.18.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - "<AUTH_TOKEN>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 17 Aug 2020 17:47:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1416'
+      Server:
+      - GitHub.com
+      Status:
+      - 201 Created
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4921'
+      X-Ratelimit-Reset:
+      - '1597687904'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      - Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - '"9c1c3c55cac4d68b3bc80059bf9d72eb"'
+      X-Oauth-Scopes:
+      - admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key,
+        admin:repo_hook, delete:packages, gist, notifications, read:packages, repo,
+        user, workflow, write:discussion, write:packages
+      X-Accepted-Oauth-Scopes:
+      - ''
+      Location:
+      - https://api.github.com/repos/Xorima/xor_test_cookbook/issues/comments/675021478
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - BB84:5C80:1636E783:1B0E915B:5F3AC2CC
+    body:
+      encoding: UTF-8
+      base64_string: |
+        eyJ1cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL1hvcmltYS94
+        b3JfdGVzdF9jb29rYm9vay9pc3N1ZXMvY29tbWVudHMvNjc1MDIxNDc4Iiwi
+        aHRtbF91cmwiOiJodHRwczovL2dpdGh1Yi5jb20vWG9yaW1hL3hvcl90ZXN0
+        X2Nvb2tib29rL3B1bGwvMjIjaXNzdWVjb21tZW50LTY3NTAyMTQ3OCIsImlz
+        c3VlX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvWG9yaW1h
+        L3hvcl90ZXN0X2Nvb2tib29rL2lzc3Vlcy8yMiIsImlkIjo2NzUwMjE0Nzgs
+        Im5vZGVfaWQiOiJNREV5T2tsemMzVmxRMjl0YldWdWREWTNOVEF5TVRRM09B
+        PT0iLCJ1c2VyIjp7ImxvZ2luIjoiWG9yaW1hIiwiaWQiOjQ5MjM5MTQsIm5v
+        ZGVfaWQiOiJNRFE2VlhObGNqUTVNak01TVRRPSIsImF2YXRhcl91cmwiOiJo
+        dHRwczovL2F2YXRhcnMwLmdpdGh1YnVzZXJjb250ZW50LmNvbS91LzQ5MjM5
+        MTQ/dj00IiwiZ3JhdmF0YXJfaWQiOiIiLCJ1cmwiOiJodHRwczovL2FwaS5n
+        aXRodWIuY29tL3VzZXJzL1hvcmltYSIsImh0bWxfdXJsIjoiaHR0cHM6Ly9n
+        aXRodWIuY29tL1hvcmltYSIsImZvbGxvd2Vyc191cmwiOiJodHRwczovL2Fw
+        aS5naXRodWIuY29tL3VzZXJzL1hvcmltYS9mb2xsb3dlcnMiLCJmb2xsb3dp
+        bmdfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9Yb3JpbWEv
+        Zm9sbG93aW5ney9vdGhlcl91c2VyfSIsImdpc3RzX3VybCI6Imh0dHBzOi8v
+        YXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1hL2dpc3Rzey9naXN0X2lkfSIs
+        InN0YXJyZWRfdXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9Y
+        b3JpbWEvc3RhcnJlZHsvb3duZXJ9ey9yZXBvfSIsInN1YnNjcmlwdGlvbnNf
+        dXJsIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9Yb3JpbWEvc3Vi
+        c2NyaXB0aW9ucyIsIm9yZ2FuaXphdGlvbnNfdXJsIjoiaHR0cHM6Ly9hcGku
+        Z2l0aHViLmNvbS91c2Vycy9Yb3JpbWEvb3JncyIsInJlcG9zX3VybCI6Imh0
+        dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1hL3JlcG9zIiwiZXZl
+        bnRzX3VybCI6Imh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcnMvWG9yaW1h
+        L2V2ZW50c3svcHJpdmFjeX0iLCJyZWNlaXZlZF9ldmVudHNfdXJsIjoiaHR0
+        cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy9Yb3JpbWEvcmVjZWl2ZWRfZXZl
+        bnRzIiwidHlwZSI6IlVzZXIiLCJzaXRlX2FkbWluIjpmYWxzZX0sImNyZWF0
+        ZWRfYXQiOiIyMDIwLTA4LTE3VDE3OjQ3OjU2WiIsInVwZGF0ZWRfYXQiOiIy
+        MDIwLTA4LTE3VDE3OjQ3OjU2WiIsImF1dGhvcl9hc3NvY2lhdGlvbiI6Ik9X
+        TkVSIiwiYm9keSI6IkxhYmVsVmFsaWRhdG9yOiBUaGlzIHdpbGwgYmUgYnVt
+        cGVkIG9uIG1lcmdlIGJ5IGEgZm9vYmFyIHZlcnNpb24iLCJwZXJmb3JtZWRf
+        dmlhX2dpdGh1Yl9hcHAiOm51bGx9
+  recorded_at: Mon, 17 Aug 2020 17:47:57 GMT
+recorded_with: VCR 6.0.0
