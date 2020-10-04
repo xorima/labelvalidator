@@ -73,11 +73,13 @@ module LabelValidator
         end
         add_bot_comment(body)
       else
-        unless comments[-1][:body] == body
-          delete_comment(comments[0])
-          add_bot_comment(body)
-        end
+        recreate_comment(comments[0], body) unless comments[-1][:body] == body
       end
+    end
+
+    def recreate_comment(comment, body)
+      delete_comment(comment)
+      add_bot_comment(body)
     end
 
     def delete_comment(comment)
