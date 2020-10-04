@@ -1,0 +1,27 @@
+---
+name: ci
+
+'on':
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@main
+      - uses: ruby/setup-ruby@v1
+      - run: bundle install --with test
+      - run: bundle exec rspec
+
+  rubocop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@main
+      - uses: ruby/setup-ruby@v1
+      - run: gem install rubocop
+      - run: rubocop
