@@ -14,10 +14,8 @@ get '/hello' do
   "Hello World"
 end
 
-
 post '/event_handler_comments' do
   return halt 500, "Signatures didn't match!" unless validate_request(request)
-
   payload = JSON.parse(params[:payload])
 
   case request.env['HTTP_X_GITHUB_EVENT']
@@ -26,7 +24,6 @@ post '/event_handler_comments' do
       labels = LabelValidator::Labels.new(pull_request: payload['pull_request'])
       vcs = LabelValidator::Vcs.new(token: ENV['GITHUB_TOKEN'], pull_request: payload['pull_request'])
       return 'Only runs on Default branch' unless vcs.default_branch_target?
-
       vcs.status_check(state: 'pending')
       if labels.release_labeled?
         process_labeled_release(labels, vcs, payload)

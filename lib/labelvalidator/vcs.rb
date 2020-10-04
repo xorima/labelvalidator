@@ -5,7 +5,7 @@ require 'octokit'
 module LabelValidator
   # Used to handle calls to VCS
   class Vcs
-    def initialize(token:, pull_request:, comments_enabled: ENV['COMMENTS_ENABLED'] || true)
+    def initialize(token:, pull_request:, comments_enabled: ENV['COMMENTS_ENABLED'] || false)
       @client = Octokit::Client.new(access_token: token)
       @pull_request = pull_request
       @comment_base = 'LabelValidator: This will be bumped on merge by a'

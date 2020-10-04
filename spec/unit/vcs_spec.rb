@@ -10,7 +10,8 @@ describe LabelValidator::Vcs, :vcr do
                      'number' => 22 }
     @vcs_client = LabelValidator::Vcs.new({
                                             token: ENV['GITHUB_TOKEN'] || 'temp_token',
-                                            pull_request: pull_request
+                                            pull_request: pull_request,
+                                            comments_enabled: true,
                                           })
   end
 

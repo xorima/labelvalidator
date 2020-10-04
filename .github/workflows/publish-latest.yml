@@ -1,6 +1,6 @@
 ---
 name: Publish to Registry
-on:
+"on":
   release:
     types: [published]
 jobs:
