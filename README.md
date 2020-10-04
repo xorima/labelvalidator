@@ -4,6 +4,8 @@ This is a simple webapp which can check if a `Release: Major|Minor|Patch` label 
 
 ## Configuration
 
+### Environment Variables
+
 This app uses the following environments variables:
 
 | Name | Required | Description |
