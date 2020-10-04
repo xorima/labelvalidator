@@ -7,14 +7,10 @@ require_relative 'labelvalidator/vcs'
 require_relative 'labelvalidator/hmac'
 
 get '/' do
-  "Hello World #{params[:name]}".strip
+  'Alive'
 end
 
-get '/hello' do
-  'Hello World'
-end
-
-post '/event_handler_comments' do
+post '/handler' do
   return halt 500, "Signatures didn't match!" unless validate_request(request)
 
   payload = JSON.parse(params[:payload])
