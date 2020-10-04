@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@main
       - uses: ruby/setup-ruby@v1
       - run: bundle install
-      - run: bundle exec rake
+      - run: bundle exec rspec
 
   rubocop:
     runs-on: ubuntu-latest
