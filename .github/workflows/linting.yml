@@ -5,14 +5,14 @@ name: ci
   pull_request:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   yamllint:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@master
+        uses: actions/checkout@main
       - name: Run yaml Lint
         uses: actionshub/yamllint@master
 
@@ -20,6 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@master
+        uses: actions/checkout@main
       - name: Run Markdown Lint
         uses: actionshub/markdownlint@master
