@@ -14,7 +14,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@main
       - uses: ruby/setup-ruby@v1
-      - run: bundle install
+      - run: bundle install --with test
       - run: bundle exec rspec
 
   rubocop:
