@@ -24,3 +24,7 @@ Events:
     Pull Requests (Only)
 
 If you set a HMAC secret ensure that `SECRET_TOKEN` is set to the same secret value
+
+## Docker images
+
+Docker images are supplied under Xorima on docker hub, <https://hub.docker.com/r/xorima/labelvalidator/>
