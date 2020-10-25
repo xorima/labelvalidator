@@ -17,7 +17,7 @@ post '/handler' do
 
   case request.env['HTTP_X_GITHUB_EVENT']
   when 'pull_request'
-    if %w[labeled unlabeled opened reopened].include?(payload['action'])
+    if %w[labeled unlabeled opened reopened synchronize].include?(payload['action'])
       labels = LabelValidator::Labels.new(pull_request: payload['pull_request'])
       vcs = LabelValidator::Vcs.new(token: ENV['GITHUB_TOKEN'], pull_request: payload['pull_request'])
       return 'Only runs on Default branch' unless vcs.default_branch_target?

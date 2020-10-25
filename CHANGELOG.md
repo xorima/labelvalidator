@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added support for `Syncronize` action in `pull_request` webhooks. This will allow the status check to be added to every push
+
 ## 1.1.1 - *2020-10-25*
 
 - Added a changelog to track changes
