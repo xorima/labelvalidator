@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.1.1 - *2020-10-25*
 
 - Added a changelog to track changes
 - Setup auto release system on merges
