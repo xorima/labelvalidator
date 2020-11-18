@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Fixed bug with dockerhub push due to set-env deprecation
+
 ## 1.2.0 - *2020-10-25*
 
 - Added support for `Syncronize` action in `pull_request` webhooks. This will allow the status check to be added to every push
