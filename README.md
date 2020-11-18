@@ -18,10 +18,12 @@ This app uses the following environments variables:
 
 To configure the webhook you will want to do the following:
 
+```none
 URL: <https://example.com/handler>
 Events:
   Let me select:
     Pull Requests (Only)
+```
 
 If you set a HMAC secret ensure that `SECRET_TOKEN` is set to the same secret value
 
